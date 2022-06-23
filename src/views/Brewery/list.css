@@ -1,0 +1,88 @@
+/*
+  Sorry about the minimilism on the CSS, I know it was marked as a stretch goal, I wish I was better as designing
+  something from scratch. Unfortunately I'm better at taking a design in Photoshop, Avocado, Figma, etc and turning
+  that into a code and getting as close to pixel perfect with tools like GluePrint.
+ */
+
+.filter-sort-displau-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view-button {
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.list-view {
+  background-image: url("https://img.icons8.com/ios/500/list--v1.png");
+}
+
+.grid-view {
+  margin-left: 10px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEX///8AAAAzMzPt7e0VFRXh4eEbGxvy8vL19fXb29vn5+f4+Pg3NzcPDw/6+vooKCgvLy+NjY0ICAhubm6ampoaGhpERERJSUmVlZV8fHx1dXUrKythYWFaWlqDg4OGhoZoaGgvxN5oAAACfElEQVR4nO3d7XaaQBRGYT6sUNERNE1jam3u/ypbf1RIUw49vDOuytrPbzzOjiuK0QlZBgAAAAAAAAAAAAAAAABYmqd9Pt/6JQxnhe6LMGz/lCTwWVjSVTtIbJQf1tXXBIEv4pry/NQPe5WHJXgUC3lReT9Mn7WNHliu9FVtfg/7pM9a14svrCikcLxw52UVzh6WsrD0ascLi8o5a3OPQvdNi/FC93N+WHxhQ+F8FBoo9KBQQKGBQg8KBRQaKPSgUEChgUIPCgUUGij0oFBAoYFCDwoFFBoo9KBQQKGBQg8KBRQaKPSgUEChgUIPCgUUGij0oFAgFG4jFmb3KFx75eOF84fxPW8KKVxiYfZNX9VtVjN97JQ2emB2khd17od9l4dd4hfWB3VRZT9sM320bRXGVzo/8W03fc+jDudyOGwjPYq7Y5Mg8Jfq83zln8NKYVj8ZxkAANBr6rn+cg4yf1iKM7arWjv3fn13VlMepWGXFGdtQX37tBqca5XqaXyb4HH8Ia4pz4/9sLM8rItfGPMdcJg+dkr8d8DL/ysGhRQ+UmHhdXtl+Fh42HqH3aOwCY1HaMzPnlyzmlDdo9B90+V/ukahB4UCCg0UelAooNBAoQeFAgoNFHpQKKDQQKEHhQIKDRR6UCig0EChB4UCCg0UelAooNBAoQeFAgoNFHpQKKDQQKEHhQIKDRR6/J+FD/efP+Z7lG9BU0ghhf9YGP1quVk7fa9TbrMi7Hsqogdmnbyowd61N3lYgr1r/cvaTPvBrsh6PX286TlBYBY65dLc7eXdL051Unb7FV2ijbLBfaHc3odtrY0wLNVGYAAAAAAAAAAAAAAAgBh+AhfwVCDInBMMAAAAAElFTkSuQmCC");
+}
+
+.list-container {
+  margin-top: 20px;
+}
+
+.list-container.list > * + * {
+  margin-top: 5px;
+}
+
+.list-container.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .list-container.grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .list-container.grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.list-container__item,
+.list-container__item:hover,
+.list-container__item:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.list-container__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+.list-conatiner__item-img {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.list-conatiner__item-name {
+  margin: 10px 0 0 10px;
+}
